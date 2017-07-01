@@ -1,0 +1,33 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #eaeaea;
+
+/* universal */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 350px;
+  margin: 0 auto;
+  background-color: #F1F4F9;
+  /* font-family: "Helvetica, Arial, sans-serif";*/
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+.heading  {
+  height: 50px;
+  font-family: "Helvetica, Arial, sans-serif";
+}
+
+.heading i {
+   text-align:center;
+}
+
+.my_style_class  {
+    display: block;
+    background-color: green;
+    width: 100%;
+}

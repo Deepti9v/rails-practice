@@ -1,0 +1,41 @@
+<!-- <h1>Users#index</h1> -->
+<h4>View All Users</h4>
+
+
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Occupation</th>
+                        <th>This is mee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @users.each do |user|   %>
+                    <tr>
+                        <td>
+                            <%= user[:name] %>
+                        </td>
+                        <td>
+                            <%= user[:occupation]%>
+                        </td>
+                        <td>
+                            <%= link_to image_tag(user.photo.url(:small)), user.photo.url %>
+                        </td>
+                        <td>
+                            <a href="/users/<%= user.id %>/edit">
+                                Edit
+                            </a>
+                        </td>
+                  </tr>
+                <% end %>
+            </tbody>
+        </table>
+        <%= link_to "Create New User", "/users/new" , {:class=>"btn btn-warning btn-block"} %>
+
+    </div>
+</div>
+</div>

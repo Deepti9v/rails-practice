@@ -1,0 +1,21 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+
+<table class="table table-striped">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Occupation</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td> <%= @user.name %> </td>
+       <td> <%= @user.occupation %> </td>
+       <td> <%= link_to image_tag(@user.photo.url(:small)), @user.photo.url %> </td>
+       </td>
+       <td> </td>
+     </tr>
+   </tbody>
+ </table>
