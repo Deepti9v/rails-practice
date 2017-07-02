@@ -21,9 +21,13 @@ Things you may want to cover:
 
 * Deployment instructions
 
-1.  gem install sudo apt-get install libmagick++-dev
-    sudo apt-get install imagemagick
+        1.  gem install sudo apt-get install libmagick++-dev
+            sudo apt-get install imagemagick
+        2.  bundle install
+        3.  Navigate to http://localhost:3000/users/
 
-2.  bundle install
+* Screen shots
 
-3.  Navigate to http://localhost:3000/users/
+![alt text](screenshots/newuser.png "For new users")
+![alt text](screenshots/viewuser.png "To view all the users")
+![alt text](screenshots/edituser.png "To edit the user information")
