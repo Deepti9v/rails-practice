@@ -30,4 +30,4 @@ Things you may want to cover:
 
 ![alt text](screenshots/newuser.png "For new users")
 ![alt text](screenshots/viewuser.png "To view all the users")
-![alt text](screenshots/edituser.png "To edit the user information")
+![alt text](https://github.com/Deepti9v/rails-practice/blob/master/Directory/screenshots/edituser.png "To edit the user information")
