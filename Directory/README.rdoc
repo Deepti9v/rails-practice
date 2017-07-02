@@ -27,7 +27,6 @@ Things you may want to cover:
         3.  Navigate to http://localhost:3000/users/
 
 * Screen shots
-
-![alt text](screenshots/newuser.png "For new users")
-![alt text](screenshots/viewuser.png "To view all the users")
-![alt text](https://github.com/Deepti9v/rails-practice/blob/master/Directory/screenshots/edituser.png "To edit the user information")
+https://github.com/Deepti9v/rails-practice/blob/master/Directory/screenshots/newuser.png
+https://github.com/Deepti9v/rails-practice/blob/master/Directory/screenshots/edituser.png
+https://github.com/Deepti9v/rails-practice/blob/master/Directory/screenshots/viewuser.png
