@@ -271,6 +271,8 @@ User.first.comments
 Blogd.last.comments
 Comment.create(data:"Comment for the second User",commentable:User.find(2))
 Message.find(7).comments
+
+Location.group("address").having('count(address)>1') #group by with count>1
 ##########################################################################################
 rails g model Person first_name:string last_name:string
 rails g model Friendship person_id:integer friend_id:integer
