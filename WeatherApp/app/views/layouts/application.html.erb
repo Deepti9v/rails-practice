@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeatherApp</title>
+    <%= include_gon(:init => true) %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+  <%= javascript_include_tag "index" %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZe4Xk1xu_4b-ZM-7X8YCe_xHJwRP39yo&sensor=false&callback=initMap"></script>
+</html>
