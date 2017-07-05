@@ -31,7 +31,5 @@ commands(FYI)
     <%= include_gon(:init => true) %> (application.html.erb)
 3.   <%= javascript_include_tag "index" %> (application.html.erb)
      assets.rb file-> Rails.application.config.assets.precompile += %w( index.js )
-4.  rails g controller Weather index
-5.  rails g scaffold location address:string latitude:float longitude:float
 
 Geocoder::Configuration.always_raise << Geocoder::OverQueryLimitError

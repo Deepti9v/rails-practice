@@ -5,13 +5,11 @@
 <div id="map" style="width:100%;height:400px;"></div>
 
 
-<form action="/weather/find" method="post">
-<div class="form-group">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label for="location">Location:</label>
-  <input id="location" type="text" class="form-control" name="location" placeholder="Additional Info">
-  <label for="location">Miles:</label>
-  <input id="location" type="text" class="form-control" name="miles" placeholder="Additional Info">
-  <input type="submit">
-</div>
-</form>
+<%= form_tag "/weather/find", remote: true do %>
+  <%= text_field_tag "location", "default info" %>
+  <%= text_field_tag "miles", "default info" %>
+  <%= submit_tag "Create" %>
+<% end %>
+
+
+<div id="target-for-change"> </div>
