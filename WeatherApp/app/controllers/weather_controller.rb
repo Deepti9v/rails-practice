@@ -16,10 +16,20 @@ class WeatherController < ApplicationController
           {'address' => x.address,
             'latitude' => x.latitude,
             'longitude'=>x.longitude,
-            'weather' => ForecastIO.forecast(x.latitude, x.longitude).daily
+            'weather' => ForecastIO.forecast(x.latitude, x.longitude).daily.data.first(5)
           }
         }
-    puts @result[0]['weather'].data[0]
+    #gon.location = "test"
+    # @another = "another"
+    # gon.another = @another
+    @job = @result
+    gon.watch.job = @job
+
+
+
+
+    puts "**************"
+    puts @result
     puts "**************"
 
     respond_to do |format|

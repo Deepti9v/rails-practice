@@ -8,17 +8,13 @@ gem "carrierwave" #pic upload
 gem 'rmagick'
 gem "paperclip", "~> 5.0.0.beta1"
 gem "font-awesome-rails"
-# gem 'yahoo_weather'
 gem "d3-rails"
 gem 'gon' #To pass from the controller to other javascript file
-#gem 'weather-api'
 gem 'forecast_io'
-
 
 gem 'geocoder',
     :git => 'git://github.com/alexreisner/geocoder.git',
     :ref => '89357b7'
-
 gem 'jquery-rails' #if you want your ajax to work and Add in Application.js (//= require jquery//= require jquery_ujs)
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'

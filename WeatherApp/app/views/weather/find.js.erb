@@ -1,47 +1,43 @@
 $( document ).ready(function() {
-  alert("hello from find");
-  //  if (typedef map === 'undefined')
-  //    alert("not defined");
-  alert(map);
-$("#target-for-change").html("testing");
+  $('#task-form').show();
+  $('#task-form').html("<%= j (render 'form') %>");
 
-  var markers = []; // Create a marker array to hold your markers
-  var beaches = [
-      ['Bondi Beach', 10, 10, 4],
-      ['Coogee Beach', 10, 11, 5],
-      ['Cronulla Beach', 10, 12, 3],
-      ['Manly Beach', 10, 13, 2],
-      ['Maroubra Beach', 10, 14, 1]
-  ];
+  gon.watch('job', {
+    interval: 10000
+    }, updateJob);
+
+ var locs = [];
+ var temp = [];
+ for (i = 0; i < gon.job.length ; i++)
+ {
+   temp = [gon.job[i].address, gon.job[i].latitude, gon.job[i].longitude,i];
+   //['Los Angeles',Lat, Long],['Santa Monica',]
+   locs.push(temp);
+ }
+
+  var markers = [];
 
   function setMarkers(locations) {
 
       for (var i = 0; i < locations.length; i++) {
-          var beach = locations[i];
-          var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+          var res = locations[i];
+          var myLatLng = new google.maps.LatLng(res[1], res[2]);
           var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
               animation: google.maps.Animation.DROP,
-              title: beach[0],
-              zIndex: beach[3]
+              title: locs[0],
+              zIndex: locs[3]
           });
-
-          // Push marker to markers array
           markers.push(marker);
       }
   }
 
-  setMarkers(beaches);
-
-
-  // var map;
-  // function initMap() {
-  //   map = new google.maps.Map(document.getElementById('map'), {
-  //     center: {lat: 39.5, lng: -98.35},
-  //     zoom: 4
-  //   });
-  // }
+  setMarkers(locs);
 
 
 });
+
+function updateJob(job) {
+
+}
