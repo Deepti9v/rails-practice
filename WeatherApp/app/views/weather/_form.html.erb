@@ -1,12 +1,17 @@
-<h1> starts here </h1>
 <%= include_gon %>
 
-<% @result.each do |location| %>
-  <br>  <%= location["address"] %> <br>
-  <%  location["weather"].each do |day| %>
-    <%= Time.at(day.time).strftime('%A') %><br/>
-    <%= day.summary %><br>
-    High: <%= day.apparentTemperatureMax %>  <br/>
-   Low: <%= day.apparentTemperatureMin %>  <br/>
-  <% end %>
-<% end %>
+<table class="table table-striped">
+    <tbody>
+      <% @result.each do |location| %>
+      <tr>
+        <td> <%= location["address"] %> </td>
+        <%  location["weather"].each do |day| %>
+          <td> <p class="time"> <%= Time.at(day.time).strftime('%A') %> </p>
+               <p class="summary"> <%= day.summary %> </p>
+               High: <%= day.apparentTemperatureMax %> | Low: <%= day.apparentTemperatureMin %>                        <br/>
+          </td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>

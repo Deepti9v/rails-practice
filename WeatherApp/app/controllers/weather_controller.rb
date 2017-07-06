@@ -9,7 +9,7 @@ class WeatherController < ApplicationController
     @locations = Location.within_bounding_box(Geocoder::Calculations.bounding_box(params[:location],params[:miles]))
     #gon.location = params[:location]
     ForecastIO.configure do |configuration|
-        configuration.api_key = '7e760ff33a6c465801375b47a8db15c2'
+        configuration.api_key = '31fb94122dc29e9b499edb0f20b672b9'
     end
     @forecast = ForecastIO.forecast(37.8267, -122.423)
     @locations.each {|x|  @result <<
@@ -19,13 +19,9 @@ class WeatherController < ApplicationController
             'weather' => ForecastIO.forecast(x.latitude, x.longitude).daily.data.first(5)
           }
         }
-    #gon.location = "test"
-    # @another = "another"
-    # gon.another = @another
+
     @job = @result
     gon.watch.job = @job
-
-
 
 
     puts "**************"
