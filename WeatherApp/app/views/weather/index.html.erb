@@ -1,18 +1,25 @@
 <%= include_gon :watch => true %>
 
-
-
-<div class="box">
-  Find all the cities around Los Angeles within 10 mile radius? This app gives you the weather report on how the next 5 days are going to look like so that you can plan accordingly.
+<div class="header">
+			<ul class="header_list">
+				<li class="header_item">  <img class="logo" src="/assets/wind.png">  </li>
+				<li class="header_item"> <h3 class="l1"> PLAN A TRIP ! </h3> </li>
+			</ul>
 </div>
 
-<div class="box">
-  <%= form_tag "/weather/find", remote: true do %>
-    <%= text_field_tag "location", "Los Angeles" %>
-    <%= text_field_tag "miles", "5" %>
-    <%= submit_tag "Search!" %>
-  <% end %>
-</div>
+
+  <div class="box">
+    Find all the cities around Los Angeles within 10 mile radius? This app gives you the weather report on how the next 5 days are going to look like so that you can plan accordingly.
+  </div>
+
+  <div class="box">
+    <%= form_tag "/weather/find", remote: true do %>
+      <%= text_field_tag "location", "Los Angeles" %>
+      <%= text_field_tag "miles", "5" %>
+      <%= submit_tag "Search!" %>
+    <% end %>
+  </div>
+
 
 <div id="map" style="width:100%;height:400px;"></div>
 

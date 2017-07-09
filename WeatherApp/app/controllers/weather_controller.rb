@@ -7,9 +7,8 @@ class WeatherController < ApplicationController
     @result = []
     @forecast = []
     @locations = Location.within_bounding_box(Geocoder::Calculations.bounding_box(params[:location],params[:miles]))
-    #gon.location = params[:location]
     ForecastIO.configure do |configuration|
-        configuration.api_key = '31fb94122dc29e9b499edb0f20b672b9'
+        configuration.api_key = '4406bd2ab2d478862f47da3dfb59e1d4'
     end
     @forecast = ForecastIO.forecast(37.8267, -122.423)
     @locations.each {|x|  @result <<
@@ -23,10 +22,11 @@ class WeatherController < ApplicationController
     @job = @result
     gon.watch.job = @job
 
+    #Logic to spot the points of interests around each of the above places
+    @client = GooglePlaces::Client.new('AIzaSyCZe4Xk1xu_4b-ZM-7X8YCe_xHJwRP39yo')
+    @interests =   @client.spots(37.8267, -122.423)
 
-    puts "**************"
-    puts @result
-    puts "**************"
+
 
     respond_to do |format|
       #format.html { redirect_to "/weather/index" }

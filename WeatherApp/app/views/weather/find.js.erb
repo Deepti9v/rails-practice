@@ -25,22 +25,15 @@ $( document ).ready(function() {
           var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
-              animation: google.maps.Animation.DROP,
-              title: locs[0],
-              zIndex: locs[3]
+              animation: google.maps.Animation.DROP
+              // title: locs[0],
+              // zIndex: locs[3]
           });
-
           markers.push(marker);
       }
   }
-
   setMarkers(locs);
-
-
-
-
 });
 
 function updateJob(job) {
-
 }

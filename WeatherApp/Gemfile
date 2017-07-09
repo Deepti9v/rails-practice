@@ -15,6 +15,10 @@ gem 'forecast_io'
 gem 'geocoder',
     :git => 'git://github.com/alexreisner/geocoder.git',
     :ref => '89357b7'
+gem 'google_places'
+
+
+
 gem 'jquery-rails' #if you want your ajax to work and Add in Application.js (//= require jquery//= require jquery_ujs)
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
