@@ -3,20 +3,27 @@
 
 <% @result.each do |location| %>
   <div class="list-header"> <%= location["address"].upcase %> </div>
+  <hr>
     <ul class="list">
         <%  location["weather"].each do |day| %>
         <li class="item"> <div class="block"> <p class="time"> <%= Time.at(day.time).strftime('%A') %> </p>
               <p class="summary"> <%= day.summary %> </p>
               <%= image_tag("#{@pic[day.summary]}") %>
-              High: <%= day.apparentTemperatureMax %> | Low: <%= day.apparentTemperatureMin %> </div>
+              High: <%= day.apparentTemperatureMax %>  Low: <%= day.apparentTemperatureMin %> </div>
         </li>
         <% end %>
+        <!-- <li>
+            <% location["interests"].each do |place| %>
+              <%= place.photos[0] %>
+              <img class="img" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CmRaAAAAORzpaHxACtYqPozm5LU67hyXBpnFo28xFPd48e-IwFc20wTXHfAL-r49tm31gZhosR_Feun7HV6UoNHaxxLcntFfHSMlPbEA6QGAFyDM-2QcOJcBMokKX_R3d_pbg7MhEhCyreGTjgd7MXzQjtZ4ou-eGhR7vU3oAbAVVN_i21GrMbZuG-sibA&key=AIzaSyCZe4Xk1xu_4b-ZM-7X8YCe_xHJwRP39yo" alt="Pic missing">
+            <% end %>
+        </li> -->
     </ul>
 <% end %>
 
-
+<!--
 <% @interests.each do |place| %>
-<% end %>
+<% end %> -->
 
 
 <small> <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></small>

@@ -10,21 +10,27 @@ class WeatherController < ApplicationController
     ForecastIO.configure do |configuration|
         configuration.api_key = '4406bd2ab2d478862f47da3dfb59e1d4'
     end
-    @forecast = ForecastIO.forecast(37.8267, -122.423)
-    @locations.each {|x|  @result <<
-          {'address' => x.address,
-            'latitude' => x.latitude,
-            'longitude'=>x.longitude,
-            'weather' => ForecastIO.forecast(x.latitude, x.longitude).daily.data.first(5)
-          }
-        }
+
+    @client = GooglePlaces::Client.new('AIzaSyCZe4Xk1xu_4b-ZM-7X8YCe_xHJwRP39yo')
+
+    @locations.each do |x|
+      @interests =   @client.spots(x.latitude,x.longitude)
+      @result <<
+           {'address' => x.address,
+             'latitude' => x.latitude,
+             'longitude'=>x.longitude,
+             'weather' => ForecastIO.forecast(x.latitude, x.longitude).daily.data.first(5),
+             'interests' => @interests
+           }
+    end
 
     @job = @result
     gon.watch.job = @job
 
-    #Logic to spot the points of interests around each of the above places
-    @client = GooglePlaces::Client.new('AIzaSyCZe4Xk1xu_4b-ZM-7X8YCe_xHJwRP39yo')
-    @interests =   @client.spots(37.8267, -122.423)
+    puts "****"
+    puts @interests.to_json
+    puts "****"
+
 
 
 

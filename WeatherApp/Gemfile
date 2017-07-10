@@ -5,7 +5,7 @@ gem 'bootstrap_form' #This one provides form helpers for bootstrap
 gem 'hirb', '~> 0.7.3'
 #gem 'rails-footnotes', '>= 4.0.0', '<5'
 gem "carrierwave" #pic upload
-gem 'rmagick'
+# gem 'rmagick'
 gem "paperclip", "~> 5.0.0.beta1"
 gem "font-awesome-rails"
 gem "d3-rails"

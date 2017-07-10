@@ -1,18 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans|Arimo);
 $roboto-slab: 'Roboto Slab', serif;
+$Arimo:  'Arimo', sans-serif;
 
 * {
   margin: 0;
   padding: 0;
+  font-family: $Arimo;
+
 }
 
 body {
   margin: 0 auto;
   background-color: #F1F4F9;
   font-family: "omnes-pro", Tahoma, sans-serif;
+  //font-family: "Arimo";
   font-color: #454545;
   font-size: 16px;
 }
@@ -25,16 +29,20 @@ body {
     margin: 1em;
     vertical-align: top;
     padding: 20px;
-    font-style: italic;
+    //font-style: italic;
     border-left: solid purple 2px;
 }
 
 .time {
-  color: blue;
+  color: #39424e;
+  font-family: $Arimo;
+
 }
 
 .summary {
-  color: green;
+  color: #39424e;
+  font-family: $Arimo;
+
 }
 
 .list{
@@ -44,28 +52,29 @@ body {
 }
 
  .item{
-    float: left;
-    margin: 5px;
-    background: #EAEAEA;
-    text-decoration: none;
+float: left;
+margin: 5px;
+background: white;
+text-decoration: none;
+border: 1px solid grey;
+border-radius: 16px;
+color: #39424E;
+padding: 5px;
 }
 
 .block {
+    font-family: $Arimo;
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    color: white;
     padding: 10px;
     height: 200px;
     width: 100px;
 }
 
 .list-header {
-    height: 20px;
-    width: 153px;
-    background-color: #FF6220;
-    text-align: center;
-    color: white;
+  width: 400px;
+  text-align: left;
 }
 
 /* Styles for header start */
@@ -74,6 +83,7 @@ body {
        height:60px;
        color: white;
        font-weight: bold;
+       border-radius: 10px;
 }
 
 
@@ -82,7 +92,7 @@ body {
 }
 
 .l1 {
-  font-family: $roboto-slab;
+  //font-family: $roboto-slab;
   font-size: 20px;
 
 }
