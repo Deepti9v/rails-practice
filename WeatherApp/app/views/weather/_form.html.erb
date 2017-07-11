@@ -12,14 +12,12 @@
               High: <%= day.apparentTemperatureMax %>  Low: <%= day.apparentTemperatureMin %> </div>
         </li>
         <% end %>
-        <!-- <li>
-            <% location["interests"].each do |place| %>
-              <%= place.photos[0] %>
-              <img class="img" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CmRaAAAAORzpaHxACtYqPozm5LU67hyXBpnFo28xFPd48e-IwFc20wTXHfAL-r49tm31gZhosR_Feun7HV6UoNHaxxLcntFfHSMlPbEA6QGAFyDM-2QcOJcBMokKX_R3d_pbg7MhEhCyreGTjgd7MXzQjtZ4ou-eGhR7vU3oAbAVVN_i21GrMbZuG-sibA&key=AIzaSyCZe4Xk1xu_4b-ZM-7X8YCe_xHJwRP39yo" alt="Pic missing">
-            <% end %>
-        </li> -->
+        <li>
+          <img class="place_img" src="<%= location["interests"][0]["photo"] %>">
+        </li>
     </ul>
 <% end %>
+
 
 <!--
 <% @interests.each do |place| %>
