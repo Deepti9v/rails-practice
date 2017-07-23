@@ -1,0 +1,9 @@
+$(document).ready(function() {
+   var points = "<%= @gold %>";
+   var display = "";
+   var  time_now = (new Date).toTimeString().slice(0,8);
+   var gold = gold || 0;
+   display = "You have earned " + "<%= @points %>" + " points @ " + time_now + "<br/>";
+   $("#status").append(display);
+   $("#gold").val("<%= @gold %>");
+ });

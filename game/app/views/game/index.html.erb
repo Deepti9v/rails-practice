@@ -1,0 +1,37 @@
+<div class="container text-center">
+
+<h1> Earn the gold </h1>
+<small>Click on each of the images below and lets see how much gold you earn !!!</small>
+
+<div class="row">
+    <div class="form-group col-xs-3">
+    <label for="usr">Total Gold:</label>
+    <input type="text" class="form-control" id="gold">
+    </div>
+</div>
+
+<div class="row">
+  <!-- <%= link_to "testing", "/game/process_points" ,remote: true, method: :post , data: "test"%> -->
+  <!-- <%= link_to "Section", game_index_url(:link_id => "link_id") %> -->
+  <a data="test" data-remote="true" rel="nofollow" data-method="post" href="/game/process_points?link_id=Casino" id="Casino" name="Casino">
+  <img src="/assets/Casino.jpeg" class="img-rounded" alt="Cinque Terre" width="250" height="236"> 
+  </a>
+  <a data="test" data-remote="true" rel="nofollow" data-method="post" href="/game/process_points?link_id=Cave" id="Cave" name="Cave">
+    <img src="/assets/Cave.jpeg" class="img-rounded" alt="Cinque Terre" width="250" height="236">
+  </a>
+  <a data="test" data-remote="true" rel="nofollow" data-method="post" href="/game/process_points?link_id=Farm" id="Farm" name="Farm">
+    <img src="/assets/Farm.jpeg" class="img-rounded" alt="Cinque Terre" width="250" height="236">
+  </a>
+  <a data="test" data-remote="true" rel="nofollow" data-method="post" href="/game/process_points?link_id=House" id="House" name="House">
+    <img src="/assets/House.jpeg" class="img-rounded" alt="Cinque Terre" width="250" height="236">
+  </a>
+</div>
+
+<div class="row">
+    <div class="panel panel-default box">
+      <div class="panel-body">
+        <div id="status">
+        </div>
+      </div>
+    </div>
+</div>

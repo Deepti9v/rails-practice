@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+
+          <div class="box-header">
+              <h3 class="">LOGIN</h1>
+          </div>
+
+          <form class="box" action="/profile/create" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" name="profile[email]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required="true">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputName">Name</label>
+              <input type="name" name="profile[name]" class="form-control" id="exampleInputName" placeholder="Name" required="true">
+            </div>
+            <div class="form-group">
+              <label for="exampleSelect1"> Location </label>
+              <select class="form-control" id="exampleSelect1" name="profile[location]" required="true">
+                <option value="Tempe">Tempe</option>
+                <option value="LA">LA</option>
+                <option value="SFO">SFO</option>
+                <option value="Texas">Texas</option>
+                <option value="Seattle">Seattle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleTextarea">comment </label>
+              <textarea name="profile[comment]" class="form-control" id="exampleTextarea" rows="3" required="true"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </div>
+    </div>
+
+</div>

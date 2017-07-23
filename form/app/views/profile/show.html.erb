@@ -1,0 +1,47 @@
+
+<div class="container">
+  <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+
+          <div class="box-header">
+              <h3 class=""> Details </h1>
+          </div>
+
+
+          <table class="table box">
+
+            <tbody>
+
+              <tr class="success">
+                <td> Email </td>
+                <td> <%= session[:data]["email"] %> </td>
+              </tr>
+
+              <tr class="success">
+                <td> Name </td>
+                <td> <%= session[:data]["name"] %> </td>
+              </tr>
+
+              <tr class="success">
+                <td> place </td>
+                <td> <%= session[:data]["location"] %> </td>
+              </tr>
+
+              <tr class="success">
+                <td> comment </td>
+                <td> <%= session[:data]["comment"] %> </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div>
+             <%= flash[:success] %>
+             <div> Submitted the form for  <%= session[:count] %> times  </div>
+          </div>
+
+          <a href="/profile/new" class="btn btn-primary btn-block"> Back </a>
+
+        </div>
+    </div>
+</div>
