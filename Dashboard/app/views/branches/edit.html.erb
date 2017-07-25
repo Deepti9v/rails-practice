@@ -1,0 +1,38 @@
+<div class="container">
+
+<form method="post" action="/branches/<%= @branch.id %>">
+        <input type="hidden" name="_method" value="patch">
+
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Branch</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="<%= @branch.branch %>" name="branch[branch]" id="example-text-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-search-input" class="col-2 col-form-label">Street</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="<%= @branch.street %>" name="branch[street]" id="example-search-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-email-input" class="col-2 col-form-label">City</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="<%= @branch.city %>" name="branch[city]" id="example-email-input">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-url-input" class="col-2 col-form-label">State</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="<%= @branch.state %>" name="branch[state]" id="example-url-input">
+        </div>
+      </div>
+      <button class="btn btn-block btn-primary"> Submit </button>
+
+</form>
+
+<button class="btn-block" > <%= link_to "Home Page" , root_path  %> </button>
+
+
+</div>
