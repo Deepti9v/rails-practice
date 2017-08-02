@@ -1,0 +1,26 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+<div class="container">
+<form class="form-inline" action="/sessions" method="post">
+  <input type="hidden" name="authenticity_token" hidden="form_authenticity_token" />
+
+
+  <label class="sr-only" for="inlineFormInputGroup">Email</label>
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <div class="input-group-addon">@</div>
+    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" name="Email">
+  </div>
+
+  <label class="sr-only" for="inlineFormInput">Password</label>
+  <input type="password" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" name="Password">
+
+  <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" > Remember me
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary" value="Log In" name="Log In">Submit</button>
+</form>
+</div>

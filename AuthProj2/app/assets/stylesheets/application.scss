@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ .box {
+  padding: 10px;
+ }
+ .row{
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+ body{
+  background-color: #F2F2F2;
+  font-family: monospace;
+ }
+ /* Bootstrap Off start */
+ input.form-control,input.form-control:focus,
+ select.form-control, select.form-control:focus,
+ textarea.form-control, textarea.form-control:focus {
+  border:none;
+  box-shadow: none;
+  border-radius: 0px;
+  height: 40px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  padding: 10px;
+ }
+ button.btn, button.btn:focus, button.btn:hover, a.btn, a.btn:focus, a.btn:hover {
+  background-color: teal;
+  border-radius: 0px;
+  height: 40px;
+ }
+ /* Bootstrap Off End */
+ .box-header {
+  padding: 15px;
+  border-bottom: 4px solid teal;
+  color: darkslategrey;
+ }

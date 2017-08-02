@@ -1,0 +1,42 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+<% if flash[:errors] %>
+<%= flash[:errors]  %>
+<% end %>
+
+<div class="container col-6">
+
+<form method="post" action="/users/<%= @user.id %>">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+
+<input type="hidden" name="_method" value="patch" />
+
+<div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Name</label>
+  <div class="col-6">
+    <input class="form-control" value="<%= @user.name %>" type="text" name="user[name]" id="Name" Placeholder="Type your name here" id="example-text-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-2 col-form-label">Email</label>
+  <div class="col-6">
+    <input class="form-control" value="<%= @user.email %>" type="search" name="user[email]" id="Email"  Placeholder="Type your email" id="example-search-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-email-input" class="col-2 col-form-label">Password</label>
+  <div class="col-6">
+    <input class="form-control" value="<%= @user.password %>" type="password" name="user[password]"  id="Password">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-url-input" class="col-2 col-form-label">Confirm Password</label>
+  <div class="col-6">
+    <input class="form-control" value="<%= @user.password_confirmation %>" type="password" name="user[password_confirmation]"  id="Password_Confirmation">
+  </div>
+</div>
+
+<input type="submit" class="btn-block btn-primary btn" name="Update" value="Update" />
+
+</form>

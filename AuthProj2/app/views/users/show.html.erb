@@ -1,0 +1,12 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+ Hello <% if  current_user %>
+  <%= current_user.name %>
+  <a href="/users/<%= @user.id %>/edit" name="Edit Profile" value="Edit Profile" > Edit Profile </a>
+  <% end %>
+
+
+
+
+<!-- @secrets = current_user.secrets -->
