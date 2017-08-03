@@ -4,6 +4,7 @@
     <title>AuthProj2</title>
     <%= csrf_meta_tags %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +18,9 @@
     <% end %>
   <% end %>
 
+
     <% if current_user %>
+      <%= current_user.name %>
       <form action="/sessions/<%= current_user.id %>" method="post">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
         <input type="hidden" name="_method" value="delete">

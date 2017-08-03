@@ -6,7 +6,32 @@
   <a href="/users/<%= @user.id %>/edit" name="Edit Profile" value="Edit Profile" > Edit Profile </a>
   <% end %>
 
+<h1> Secret List </h1>
+<% current_user.secrets.each do |secret| %>
+<p>  <%= secret.content %> </p>
+<% end %>
 
+
+<h1> Create secret </h1>
+
+<form action="/secrets" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+
+  <div class="form-group row">
+    <label for="example-text-input" class="col-2 col-form-label">content </label>
+    <div class="col-6">
+      <input class="form-control" type="text" name="secret[content]" id="Name" Placeholder="Type your secret here" id="example-text-input">
+    </div>
+  </div>
+
+      <input class="form-control" value="<%= @user.id %>" type="hidden" name="secret[user_id]" id="example-search-input">
+
+  </div>
+
+
+  <input type="submit" class="btn-block btn-primary btn" name="Submit" value="Submit" />
+
+</form>
 
 
 <!-- @secrets = current_user.secrets -->
